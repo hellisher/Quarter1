@@ -16,6 +16,7 @@ class LoginFormController: UIViewController {
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(patternImage: UIImage(named: "House.jpg")!)
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
     }
@@ -54,9 +55,15 @@ class LoginFormController: UIViewController {
         let login = loginInput.text!
         let password = passwordInput.text!
         if login == "Boss" && password == "1234" {
-            print("Успешная авторизация, Босс!")
+            print("Welcome, Boss!")
+            self.performSegue(withIdentifier: "Success", sender: nil)
         } else {
-            print("Это провал, Босс!")
+            print("You are invalid!")
+            let alert = UIAlertController(title: "Error", message: "Are you invalid?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok, Chief", style: .cancel, handler: { _ in
+                print("Ok... Chief...")
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     
