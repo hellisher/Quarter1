@@ -1,17 +1,17 @@
 //
-//  GroupsCell.swift
+//  AllGroupsCell.swift
 //  190803 Lesson1.Homework
 //
-//  Created by Валерий Эль-Хатиб on 14/08/2019.
+//  Created by Валерий Эль-Хатиб on 15/08/2019.
 //  Copyright © 2019 EVM Corporation. All rights reserved.
 //
 
 import UIKit
 
-class GroupsCell: UITableViewCell {
+class AllGroupsCell: UITableViewCell {
 
-    @IBOutlet weak var groupName: UILabel!
-    @IBOutlet weak var groupImage: UIImageView!
+    @IBOutlet weak var allGroupName: UILabel!
+    @IBOutlet weak var allGroupsImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

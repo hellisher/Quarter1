@@ -1,18 +1,18 @@
 //
-//  FriendsController.swift
+//  AllGroupsController.swift
 //  190803 Lesson1.Homework
 //
-//  Created by Валерий Эль-Хатиб on 14/08/2019.
+//  Created by Валерий Эль-Хатиб on 15/08/2019.
 //  Copyright © 2019 EVM Corporation. All rights reserved.
 //
 
 import UIKit
 
-class FriendsController: UITableViewController {
-
-    var friends: [String] = ["John", "Robert", "Maria", "Leon", "Viadea"]
-    var friendsPhoto: [UIImage] = [UIImage(named: "John")!, UIImage(named: "Robert")!, UIImage(named: "Maria")!, UIImage(named: "Leon")!, UIImage(named: "Viadea")!]
+class AllGroupsController: UITableViewController {
     
+    var allGroups: [String] = ["Swift", "Apple", "Wylsacom", "My Love is Pornhub", "Bloomberg"]
+    var allGroupsPhoto: [UIImage] = [UIImage(named: "Swift")!, UIImage(named: "Apple")!, UIImage(named: "Wylsacom")!, UIImage(named: "My Love is Pornhub")!, UIImage(named: "Bloomberg")!]
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -22,15 +22,15 @@ class FriendsController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return friends.count
+        return allGroups.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath) as! FriendsCell
-        let friend = friends[indexPath.row]
-        let photo = friendsPhoto[indexPath.row]
-        cell.friendName.text = friend
-        cell.friendPhoto.image = photo
+        let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroupsCell", for: indexPath) as! AllGroupsCell
+        let group = allGroups[indexPath.row]
+        let groupPhoto = allGroupsPhoto[indexPath.row]
+        cell.allGroupName.text = group
+        cell.allGroupsImage.image = groupPhoto
         return cell
     }
 

@@ -10,14 +10,14 @@ import UIKit
 
 class GroupsController: UITableViewController {
 
-    var groups: [String] = ["Swift", "Porn", "iOS Developers"]
+    var groups = [String]()
+    var groupsPhoto = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
@@ -28,8 +28,28 @@ class GroupsController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupsCell", for: indexPath) as! GroupsCell
         let group = groups[indexPath.row]
+        let groupPhoto = groupsPhoto[indexPath.row]
         cell.groupName.text = group
+        cell.groupImage.image = groupPhoto
         return cell
+    }
+    
+    @IBAction func addGroup(segue: UIStoryboardSegue) {
+        if segue.identifier == "addGroup" {
+            
+            let AllGroupsController = segue.source as! AllGroupsController
+            
+            if let indexPath = AllGroupsController.tableView.indexPathForSelectedRow {
+                let group = AllGroupsController.allGroups[indexPath.row]
+                let groupPhoto = AllGroupsController.allGroupsPhoto[indexPath.row]
+                
+                if !groups.contains(group) {
+                groups.append(group)
+                groupsPhoto.append(groupPhoto)
+                tableView.reloadData()
+                }
+            }
+        }
     }
 
     /*
@@ -40,17 +60,13 @@ class GroupsController: UITableViewController {
     }
     */
 
-    /*
-    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            groups.remove(at: indexPath.row)
+            groupsPhoto.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
-    */
 
     /*
     // Override to support rearranging the table view.
