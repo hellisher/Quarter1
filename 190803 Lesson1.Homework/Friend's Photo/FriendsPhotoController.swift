@@ -10,6 +10,8 @@ import UIKit
 
 class FriendsPhotoController: UICollectionViewController {
 
+    var friendPhoto: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -27,12 +29,12 @@ class FriendsPhotoController: UICollectionViewController {
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 5
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

@@ -7,7 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
-class User {
-    
+struct Friend {
+    var friendName: String
+    var friendAvatar: UIImage?
 }
+
+let reeves = Friend(friendName: "Keanu Reeves", friendAvatar: UIImage(named: "Reeves"))
+let dicaprio = Friend(friendName: "Leonardo Dicaprio", friendAvatar: UIImage(named: "Dicaprio"))
+let pitt = Friend(friendName: "Brad Pitt", friendAvatar: UIImage(named: "Pitt"))
+let kidman = Friend(friendName: "Nicole Kidman", friendAvatar: UIImage(named: "Kidman"))
+let robbie = Friend(friendName: "Margot Robbie", friendAvatar: UIImage(named: "Robbie"))
+
+let myFriends = [reeves, dicaprio, pitt, kidman, robbie]

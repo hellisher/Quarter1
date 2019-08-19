@@ -10,9 +10,8 @@ import UIKit
 
 class AllGroupsController: UITableViewController {
     
-    var allGroups: [String] = ["Swift", "Apple", "Wylsacom", "My Love is Pornhub", "Bloomberg"]
-    var allGroupsPhoto: [UIImage] = [UIImage(named: "Swift")!, UIImage(named: "Apple")!, UIImage(named: "Wylsacom")!, UIImage(named: "My Love is Pornhub")!, UIImage(named: "Bloomberg")!]
-
+    var allGroups = globalGroups
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,9 +27,8 @@ class AllGroupsController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AllGroupsCell", for: indexPath) as! AllGroupsCell
         let group = allGroups[indexPath.row]
-        let groupPhoto = allGroupsPhoto[indexPath.row]
-        cell.allGroupName.text = group
-        cell.allGroupsImage.image = groupPhoto
+        cell.allGroupName.text = group.groupName
+        cell.allGroupsImage.image = group.groupAvatar
         return cell
     }
 

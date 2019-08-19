@@ -10,8 +10,7 @@ import UIKit
 
 class FriendsController: UITableViewController {
 
-    var friends: [String] = ["John", "Robert", "Maria", "Leon", "Viadea"]
-    var friendsPhoto: [UIImage] = [UIImage(named: "John")!, UIImage(named: "Robert")!, UIImage(named: "Maria")!, UIImage(named: "Leon")!, UIImage(named: "Viadea")!]
+    var friends = myFriends
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +27,18 @@ class FriendsController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath) as! FriendsCell
         let friend = friends[indexPath.row]
-        let photo = friendsPhoto[indexPath.row]
-        cell.friendName.text = friend
-        cell.friendPhoto.image = photo
+        cell.friendName.text = friend.friendName
+        cell.friendPhoto.image = friend.friendAvatar
         return cell
     }
 
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let friend = friends[indexPath.row]
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FriendsPhotoController") as! FriendsPhotoController
+        vc.friendPhoto = friend.friendAvatar
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

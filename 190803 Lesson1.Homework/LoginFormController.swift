@@ -54,7 +54,7 @@ class LoginFormController: UIViewController {
     @IBAction func loginButtonPressed(_ sender: Any) {
         let login = loginInput.text!
         let password = passwordInput.text!
-        if login == "Boss" && password == "1234" {
+        if login == "" && password == "" {
             print("Welcome, Boss!")
             self.performSegue(withIdentifier: "Success", sender: nil)
         } else {

@@ -10,8 +10,7 @@ import UIKit
 
 class GroupsController: UITableViewController {
 
-    var groups = [String]()
-    var groupsPhoto = [UIImage]()
+    var groups = [Group]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,26 +27,21 @@ class GroupsController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupsCell", for: indexPath) as! GroupsCell
         let group = groups[indexPath.row]
-        let groupPhoto = groupsPhoto[indexPath.row]
-        cell.groupName.text = group
-        cell.groupImage.image = groupPhoto
+        cell.groupName.text = group.groupName
+        cell.groupImage.image = group.groupAvatar
         return cell
     }
     
     @IBAction func addGroup(segue: UIStoryboardSegue) {
         if segue.identifier == "addGroup" {
-            
             let AllGroupsController = segue.source as! AllGroupsController
             
             if let indexPath = AllGroupsController.tableView.indexPathForSelectedRow {
                 let group = AllGroupsController.allGroups[indexPath.row]
-                let groupPhoto = AllGroupsController.allGroupsPhoto[indexPath.row]
-                
-                if !groups.contains(group) {
-                groups.append(group)
-                groupsPhoto.append(groupPhoto)
-                tableView.reloadData()
-                }
+//                if !groups.contains(group) {
+//                groups.append(group)
+//                tableView.reloadData()
+//                }
             }
         }
     }
@@ -63,7 +57,6 @@ class GroupsController: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             groups.remove(at: indexPath.row)
-            groupsPhoto.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
