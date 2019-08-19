@@ -67,6 +67,16 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QTe-uA-33l" customClass="TestView" customModule="_90803_Lesson1_Homework" customModuleProvider="target">
+                                        <rect key="frame" x="67" y="8" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                <real key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="n5a-46-ZHJ" firstAttribute="centerX" secondItem="GXV-Y6-uNO" secondAttribute="centerX" id="972-pu-XAd"/>
@@ -131,13 +141,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyD-13-Dt2">
-                                            <rect key="frame" x="48.5" y="5" width="321.5" height="33.5"/>
+                                            <rect key="frame" x="104.5" y="5" width="265.5" height="89.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3Rc-8R-FO0">
-                                            <rect key="frame" x="5" y="5" width="33.5" height="33.5"/>
+                                            <rect key="frame" x="5" y="5" width="89.5" height="89.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="3Rc-8R-FO0" secondAttribute="height" multiplier="1:1" id="xal-ch-YFi"/>
                                             </constraints>
@@ -190,13 +200,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="PW8-kq-KOG">
-                                            <rect key="frame" x="5" y="5" width="39.5" height="39.5"/>
+                                            <rect key="frame" x="5" y="5" width="89.5" height="89.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="PW8-kq-KOG" secondAttribute="height" multiplier="1:1" id="Jg0-Ci-h7x"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0H-AQ-Wai">
-                                            <rect key="frame" x="54.5" y="5" width="315.5" height="39.5"/>
+                                            <rect key="frame" x="104.5" y="5" width="265.5" height="89.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -247,7 +257,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="FriendsPhotoCell" id="Ftw-7W-n1n" customClass="FriendsPhotoCell" customModule="_90803_Lesson1_Homework" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FriendsPhotoCell" id="Ftw-7W-n1n" customClass="FriendsPhotoCell" customModule="_90803_Lesson1_Homework" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -258,6 +268,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqo-XX-TNL">
+                                            <rect key="frame" x="54" y="70" width="46" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="button:" destination="FzJ-LQ-7Pb" eventType="touchUpInside" id="lwI-Nd-J1K"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </view>
                                 <connections>
@@ -272,6 +290,7 @@
                     </collectionView>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPi-xI-ZYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FzJ-LQ-7Pb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="8596" y="-307.1964017991005"/>
         </scene>
@@ -292,13 +311,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Tue-bD-3aV">
-                                            <rect key="frame" x="5" y="5" width="39.5" height="39.5"/>
+                                            <rect key="frame" x="5" y="5" width="89.5" height="89.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="Tue-bD-3aV" secondAttribute="height" multiplier="1:1" id="0jA-3y-Jgt"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrI-2H-yuM">
-                                            <rect key="frame" x="54.5" y="5" width="315.5" height="39.5"/>
+                                            <rect key="frame" x="104.5" y="5" width="265.5" height="89.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
