@@ -14,9 +14,8 @@
 		963BEF7D23049B7D00A5F366 /* GroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963BEF7C23049B7D00A5F366 /* GroupsController.swift */; };
 		963BEF7F23049B9800A5F366 /* GroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963BEF7E23049B9800A5F366 /* GroupsCell.swift */; };
 		965F3AE922F60626009A6ED4 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965F3AE822F60626009A6ED4 /* LoginFormController.swift */; };
-		96695701230AAA970013A7F1 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96695700230AAA970013A7F1 /* TestView.swift */; };
-		96695706230AB46E0013A7F1 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96695705230AB46E0013A7F1 /* Like.swift */; };
-		96695708230AB6C60013A7F1 /* FriendAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96695707230AB6C60013A7F1 /* FriendAvatar.swift */; };
+		96695706230AB46E0013A7F1 /* LikeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96695705230AB46E0013A7F1 /* LikeController.swift */; };
+		967EDA72230C46CD00D7EBB7 /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967EDA71230C46CD00D7EBB7 /* LikeButton.swift */; };
 		96AF7E7E230553EE0017863D /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AF7E7D230553EE0017863D /* Group.swift */; };
 		96AF7E80230554110017863D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AF7E7F230554110017863D /* User.swift */; };
 		96AF7E832305565A0017863D /* FriendsPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AF7E822305565A0017863D /* FriendsPhotoController.swift */; };
@@ -35,9 +34,8 @@
 		963BEF7C23049B7D00A5F366 /* GroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsController.swift; sourceTree = "<group>"; };
 		963BEF7E23049B9800A5F366 /* GroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCell.swift; sourceTree = "<group>"; };
 		965F3AE822F60626009A6ED4 /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
-		96695700230AAA970013A7F1 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
-		96695705230AB46E0013A7F1 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
-		96695707230AB6C60013A7F1 /* FriendAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAvatar.swift; sourceTree = "<group>"; };
+		96695705230AB46E0013A7F1 /* LikeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeController.swift; sourceTree = "<group>"; };
+		967EDA71230C46CD00D7EBB7 /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		96AF7E7D230553EE0017863D /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		96AF7E7F230554110017863D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		96AF7E822305565A0017863D /* FriendsPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotoController.swift; sourceTree = "<group>"; };
@@ -88,19 +86,11 @@
 			path = Groups;
 			sourceTree = "<group>";
 		};
-		96695702230AAAA10013A7F1 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				96695700230AAA970013A7F1 /* TestView.swift */,
-				96695707230AB6C60013A7F1 /* FriendAvatar.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		96695709230AB6D40013A7F1 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				96695705230AB46E0013A7F1 /* Like.swift */,
+				96695705230AB46E0013A7F1 /* LikeController.swift */,
+				967EDA71230C46CD00D7EBB7 /* LikeButton.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -143,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				96695709230AB6D40013A7F1 /* Controls */,
-				96695702230AAAA10013A7F1 /* Views */,
 				96AF7E7A230552DF0017863D /* Model */,
 				962AA1BD230543EF0023E4FC /* AllGroups */,
 				963BEF7B23049B4B00A5F366 /* Groups */,
@@ -236,14 +225,13 @@
 				963BEF7D23049B7D00A5F366 /* GroupsController.swift in Sources */,
 				96E022C322F5ED3B0094AA80 /* AppDelegate.swift in Sources */,
 				963BEF78230496BF00A5F366 /* FriendsController.swift in Sources */,
+				967EDA72230C46CD00D7EBB7 /* LikeButton.swift in Sources */,
 				96AF7E832305565A0017863D /* FriendsPhotoController.swift in Sources */,
 				963BEF7F23049B9800A5F366 /* GroupsCell.swift in Sources */,
-				96695706230AB46E0013A7F1 /* Like.swift in Sources */,
-				96695708230AB6C60013A7F1 /* FriendAvatar.swift in Sources */,
+				96695706230AB46E0013A7F1 /* LikeController.swift in Sources */,
 				965F3AE922F60626009A6ED4 /* LoginFormController.swift in Sources */,
 				963BEF7A230496DF00A5F366 /* FriendsCell.swift in Sources */,
 				96AF7E80230554110017863D /* User.swift in Sources */,
-				96695701230AAA970013A7F1 /* TestView.swift in Sources */,
 				962AA1C1230545720023E4FC /* AllGroupsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

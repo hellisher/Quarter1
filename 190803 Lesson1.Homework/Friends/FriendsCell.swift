@@ -12,10 +12,19 @@ class FriendsCell: UITableViewCell {
 
     @IBOutlet weak var friendName: UILabel!
     @IBOutlet weak var friendPhoto: UIImageView!
+    @IBOutlet weak var friendShadow: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        friendPhoto.layer.cornerRadius = 45
+        friendPhoto.layer.masksToBounds = true
+        
+        friendShadow.frame = friendPhoto.frame
+        friendShadow.layer.backgroundColor = UIColor.black.cgColor
+        friendShadow.layer.shadowColor = UIColor.black.cgColor
+        friendShadow.layer.cornerRadius = 45
+        friendShadow.layer.shadowRadius = 45
+        friendShadow.layer.shadowOpacity = 1
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

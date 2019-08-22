@@ -38,10 +38,13 @@ class GroupsController: UITableViewController {
             
             if let indexPath = AllGroupsController.tableView.indexPathForSelectedRow {
                 let group = AllGroupsController.allGroups[indexPath.row]
-//                if !groups.contains(group) {
-//                groups.append(group)
-//                tableView.reloadData()
-//                }
+                for grp in groups {
+                    if grp.groupName == group.groupName {
+                        return
+                    }
+                }
+                groups.append(group)
+                tableView.reloadData()
             }
         }
     }
