@@ -16,6 +16,7 @@ import Foundation
     @IBAction func Like(_ sender: Any) {
         likeCount += 1
         print(likeCount)
+        //Думаю ещё
     }
     
 
