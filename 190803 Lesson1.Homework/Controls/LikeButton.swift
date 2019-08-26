@@ -11,5 +11,6 @@ import UIKit
 class LikeButton: UIButton {
     override func image(for state: UIControl.State) -> UIImage? {
         return UIImage(named: "NoActiveLike")
+        //думаю
     }
 }
