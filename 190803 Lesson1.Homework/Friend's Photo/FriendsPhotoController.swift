@@ -9,13 +9,13 @@
 import UIKit
 
 class FriendsPhotoController: UICollectionViewController {
-
+    
     var friendPhoto: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-
+    
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -30,7 +30,7 @@ class FriendsPhotoController: UICollectionViewController {
         cell.photo.image = friendPhoto
         return cell
     }
-
+    
     // MARK: UICollectionViewDelegate
 
     /*

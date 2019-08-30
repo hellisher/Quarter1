@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		962485F12314153000DF530C /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962485F02314153000DF530C /* LikeButton.swift */; };
 		962AA1BF230545610023E4FC /* AllGroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962AA1BE230545610023E4FC /* AllGroupsController.swift */; };
 		962AA1C1230545720023E4FC /* AllGroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962AA1C0230545720023E4FC /* AllGroupsCell.swift */; };
 		963BEF78230496BF00A5F366 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963BEF77230496BF00A5F366 /* FriendsController.swift */; };
@@ -20,7 +19,7 @@
 		96636E512313EE12008E776E /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96636E502313EE12008E776E /* News.swift */; };
 		96636E552313F97A008E776E /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96636E542313F97A008E776E /* NewsViewController.swift */; };
 		96636E5723140005008E776E /* NewsViewController + UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96636E5623140005008E776E /* NewsViewController + UITableViewDataSource.swift */; };
-		96695706230AB46E0013A7F1 /* LikeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96695705230AB46E0013A7F1 /* LikeController.swift */; };
+		966C1FD22314F4C500D4B745 /* LikeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966C1FD12314F4C500D4B745 /* LikeController.swift */; };
 		96AF7E7E230553EE0017863D /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AF7E7D230553EE0017863D /* Group.swift */; };
 		96AF7E80230554110017863D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AF7E7F230554110017863D /* User.swift */; };
 		96AF7E832305565A0017863D /* FriendsPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AF7E822305565A0017863D /* FriendsPhotoController.swift */; };
@@ -32,7 +31,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		962485F02314153000DF530C /* LikeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
 		962AA1BE230545610023E4FC /* AllGroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsController.swift; sourceTree = "<group>"; };
 		962AA1C0230545720023E4FC /* AllGroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsCell.swift; sourceTree = "<group>"; };
 		963BEF77230496BF00A5F366 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
@@ -45,7 +43,7 @@
 		96636E502313EE12008E776E /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		96636E542313F97A008E776E /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		96636E5623140005008E776E /* NewsViewController + UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsViewController + UITableViewDataSource.swift"; sourceTree = "<group>"; };
-		96695705230AB46E0013A7F1 /* LikeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeController.swift; sourceTree = "<group>"; };
+		966C1FD12314F4C500D4B745 /* LikeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeController.swift; sourceTree = "<group>"; };
 		96AF7E7D230553EE0017863D /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		96AF7E7F230554110017863D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		96AF7E822305565A0017863D /* FriendsPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotoController.swift; sourceTree = "<group>"; };
@@ -110,8 +108,7 @@
 		96695709230AB6D40013A7F1 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				96695705230AB46E0013A7F1 /* LikeController.swift */,
-				962485F02314153000DF530C /* LikeButton.swift */,
+				966C1FD12314F4C500D4B745 /* LikeController.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -252,9 +249,8 @@
 				963BEF78230496BF00A5F366 /* FriendsController.swift in Sources */,
 				96AF7E832305565A0017863D /* FriendsPhotoController.swift in Sources */,
 				963BEF7F23049B9800A5F366 /* GroupsCell.swift in Sources */,
-				96695706230AB46E0013A7F1 /* LikeController.swift in Sources */,
-				962485F12314153000DF530C /* LikeButton.swift in Sources */,
 				965F3AE922F60626009A6ED4 /* LoginFormController.swift in Sources */,
+				966C1FD22314F4C500D4B745 /* LikeController.swift in Sources */,
 				96636E5723140005008E776E /* NewsViewController + UITableViewDataSource.swift in Sources */,
 				96636E4E2312F3BC008E776E /* NewsCell.swift in Sources */,
 				96636E552313F97A008E776E /* NewsViewController.swift in Sources */,

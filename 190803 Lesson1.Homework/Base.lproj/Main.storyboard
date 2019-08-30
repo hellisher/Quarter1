@@ -264,24 +264,36 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Etl-3H-hDw" customClass="LikeButton" customModule="_90803_Lesson1_Homework" customModuleProvider="target">
-                                            <rect key="frame" x="70" y="70" width="30" height="30"/>
-                                            <accessibility key="accessibilityConfiguration" identifier="likesButton"/>
-                                            <state key="normal" title="Like"/>
+                                        <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfd-JE-LuF">
+                                            <rect key="frame" x="70" y="76" width="30" height="24"/>
+                                            <state key="normal" image="NoActiveLike"/>
+                                            <state key="highlighted" image="ActiveLike"/>
                                             <connections>
-                                                <action selector="like:" destination="c8e-f4-7La" eventType="touchUpInside" id="3es-8m-IVU"/>
-                                                <action selector="likesButton:" destination="c8e-f4-7La" eventType="touchUpInside" id="q77-cq-PHP"/>
+                                                <action selector="likeButtonTap:" destination="Ftw-7W-n1n" eventType="touchUpInside" id="OlK-mx-T0n"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUX-iz-Xmh">
+                                            <rect key="frame" x="50" y="77.5" width="20" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="VoP-5r-csb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="Etl-3H-hDw" firstAttribute="top" secondItem="Ftw-7W-n1n" secondAttribute="top" constant="70" id="4ZW-bl-Z0C"/>
-                                    <constraint firstItem="Etl-3H-hDw" firstAttribute="leading" secondItem="Ftw-7W-n1n" secondAttribute="leading" constant="70" id="6sc-Os-4xU"/>
-                                    <constraint firstAttribute="bottom" secondItem="Etl-3H-hDw" secondAttribute="bottom" id="Hxk-te-rEv"/>
-                                    <constraint firstAttribute="trailing" secondItem="Etl-3H-hDw" secondAttribute="trailing" id="iFw-NK-YnG"/>
+                                    <constraint firstItem="lUX-iz-Xmh" firstAttribute="centerY" secondItem="zfd-JE-LuF" secondAttribute="centerY" id="5Uc-iP-dzm"/>
+                                    <constraint firstItem="zfd-JE-LuF" firstAttribute="top" secondItem="Ftw-7W-n1n" secondAttribute="top" constant="76" id="Iab-2h-rdK"/>
+                                    <constraint firstAttribute="bottom" secondItem="zfd-JE-LuF" secondAttribute="bottom" id="cVd-YE-Tfy"/>
+                                    <constraint firstItem="zfd-JE-LuF" firstAttribute="leading" secondItem="lUX-iz-Xmh" secondAttribute="trailing" id="jkO-il-nbd"/>
+                                    <constraint firstAttribute="trailing" secondItem="zfd-JE-LuF" secondAttribute="trailing" id="m0M-q7-uhR"/>
+                                    <constraint firstItem="lUX-iz-Xmh" firstAttribute="leading" secondItem="Ftw-7W-n1n" secondAttribute="leading" constant="50" id="ox5-z7-nrn"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="likeButton" destination="zfd-JE-LuF" id="Wvq-YI-904"/>
+                                    <outlet property="likeCountLabel" destination="lUX-iz-Xmh" id="jVn-c3-iMq"/>
                                     <outlet property="photo" destination="PAE-dh-Ycc" id="kXk-ga-t36"/>
                                 </connections>
                             </collectionViewCell>
@@ -293,7 +305,6 @@
                     </collectionView>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jPi-xI-ZYs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="c8e-f4-7La" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="8596" y="-307.1964017991005"/>
         </scene>
@@ -478,8 +489,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ActiveLike" width="24" height="24"/>
         <image name="Friends.png" width="24" height="24"/>
         <image name="Groups.png" width="24" height="24"/>
+        <image name="NoActiveLike" width="24" height="24"/>
         <image name="newsIcon" width="24" height="24"/>
     </resources>
 </document>

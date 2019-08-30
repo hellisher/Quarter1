@@ -10,4 +10,19 @@ import UIKit
 
 class FriendsPhotoCell: UICollectionViewCell {
     @IBOutlet weak var photo: UIImageView!
+    var likeCount: Int = 0
+    @IBOutlet weak var likeCountLabel: UILabel!
+    @IBOutlet weak var likeButton: UIButton!
+    
+    @IBAction func likeButtonTap(_ sender: Any) {
+        if likeCount == 0 {
+            likeCount += 1
+            likeCountLabel.text = String(likeCount)
+            likeButton.setImage(UIImage(named: "ActiveLike"), for: .normal)
+        } else {
+            likeCount -= 1
+            likeCountLabel.text = String(likeCount)
+            likeButton.setImage(UIImage(named: "NoActiveLike"), for: .normal)
+        }
+    }
 }
