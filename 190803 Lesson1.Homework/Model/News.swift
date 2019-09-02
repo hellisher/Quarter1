@@ -15,4 +15,8 @@ struct News {
     var friendAvatar: UIImage?
     var newsText: String?
     var newsImage: UIImage?
+    var newsLikesCount: String?
+    var newSharesCount: String?
+    var newsCommentsCount: String?
+    var newsViewsCount: String?
 }

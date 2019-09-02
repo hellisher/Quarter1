@@ -18,10 +18,12 @@ class FriendsPhotoCell: UICollectionViewCell {
         if likeCount == 0 {
             likeCount += 1
             likeCountLabel.text = String(likeCount)
+            likeCountLabel.textColor = UIColor.red
             likeButton.setImage(UIImage(named: "ActiveLike"), for: .normal)
         } else {
             likeCount -= 1
             likeCountLabel.text = String(likeCount)
+            likeCountLabel.textColor = UIColor.black
             likeButton.setImage(UIImage(named: "NoActiveLike"), for: .normal)
         }
     }

@@ -14,6 +14,30 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var friendAvatarImageView: UIImageView!
     @IBOutlet weak var newsTextView: UITextView!
     @IBOutlet weak var newsImageView: UIImageView!
+    @IBOutlet weak var likeCountLabel: UILabel!
+    @IBOutlet weak var commentCountLabel: UILabel!
+    @IBOutlet weak var labelShareCount: UILabel!
+    @IBOutlet weak var likeButtonImage: UIButton!
+    
+    var likesCount: Int = 0
+    
+    @IBAction func buttonShare(_ sender: Any) {
+    }
+    
+    @IBAction func likeButton(_ sender: Any) {
+        if likesCount == 0 {
+            likesCount += 1
+            likeCountLabel.textColor = UIColor.red
+            likeButtonImage.setImage(UIImage(named: "ActiveLike"), for: .normal)
+        } else {
+            likesCount -= 1
+            likeCountLabel.textColor = UIColor.black
+            likeButtonImage.setImage(UIImage(named: "NoActiveLike"), for: .normal)
+        }
+    }
+    
+    @IBAction func commentButton(_ sender: Any) {
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,7 +55,9 @@ class NewsCell: UITableViewCell {
         self.friendAvatarImageView.image = news.friendAvatar
         self.newsTextView.text = news.newsText
         self.newsImageView.image = news.newsImage
-        
+        self.likeCountLabel.text = news.newsLikesCount
+        self.labelShareCount.text = news.newSharesCount
+        self.commentCountLabel.text = news.newsCommentsCount
     }
     
 }

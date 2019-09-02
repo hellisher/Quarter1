@@ -8,12 +8,20 @@
 
 import UIKit
 
-class FriendsController: UITableViewController {
+class FriendsController: UITableViewController, UISearchBarDelegate {
 
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var friendFirstNameLetter: UILabel!
+    
     var friends = myFriends
+    var filteredFriends = myFriends
+    var isSearching = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
+        searchBar.returnKeyType = UIReturnKeyType.done
+        friendFirstNameLetter.text = "Jopa"
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -21,16 +29,33 @@ class FriendsController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if isSearching {
+            return filteredFriends.count
+        }
+        
         return friends.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath) as! FriendsCell
         let friend = friends[indexPath.row]
+        
+        if isSearching {
+            cell.friendName.text = friend.friendName
+        }
+        
         cell.friendName.text = friend.friendName
         cell.friendPhoto.image = friend.friendAvatar
         return cell
     }
+    
+//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+//        if searchBar.texrt == nil || searchBar.text == "" {
+//            isSearching = false
+//            view.endEditing(true)
+//        }
+//    }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let friend = friends[indexPath.row]

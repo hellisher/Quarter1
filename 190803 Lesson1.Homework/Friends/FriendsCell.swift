@@ -14,6 +14,17 @@ class FriendsCell: UITableViewCell {
     @IBOutlet weak var friendPhoto: UIImageView!
     @IBOutlet weak var friendShadow: UIView!
     
+    func animateAuthButton() {
+        let animation = CASpringAnimation(keyPath: "transform.scale")
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.stiffness = 200
+        animation.mass = 2
+        animation.duration = 2
+        animation.beginTime = CACurrentMediaTime() + 1
+        animation.fillMode = CAMediaTimingFillMode.backwards
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         friendPhoto.layer.cornerRadius = 45
@@ -26,11 +37,9 @@ class FriendsCell: UITableViewCell {
         friendShadow.layer.shadowRadius = 45
         friendShadow.layer.shadowOpacity = 1
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }
