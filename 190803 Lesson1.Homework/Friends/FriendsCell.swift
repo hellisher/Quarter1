@@ -14,7 +14,6 @@ class FriendsCell: UITableViewCell {
     @IBOutlet weak var friendPhoto: UIImageView!
     @IBOutlet weak var friendShadow: UIView!
     
-    //thinking
     func animateAuthButton() {
         let animation = CASpringAnimation(keyPath: "transform.scale")
         animation.fromValue = 0
