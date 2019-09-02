@@ -18,6 +18,7 @@ class NewsCell: UITableViewCell {
     @IBOutlet weak var commentCountLabel: UILabel!
     @IBOutlet weak var labelShareCount: UILabel!
     @IBOutlet weak var likeButtonImage: UIButton!
+    @IBOutlet weak var labelViewsCount: UILabel!
     
     var likesCount: Int = 0
     
@@ -58,6 +59,7 @@ class NewsCell: UITableViewCell {
         self.likeCountLabel.text = news.newsLikesCount
         self.labelShareCount.text = news.newSharesCount
         self.commentCountLabel.text = news.newsCommentsCount
+        self.labelViewsCount.text = news.newsViewsCount
     }
     
 }

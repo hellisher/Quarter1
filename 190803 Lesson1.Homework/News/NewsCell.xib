@@ -95,7 +95,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ig-0Z-GkG">
-                        <rect key="frame" x="86" y="362.5" width="30" height="30"/>
+                        <rect key="frame" x="86" y="364.5" width="30" height="30"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="aYm-vb-c3G"/>
                             <constraint firstAttribute="height" constant="30" id="bsW-ti-Gpj"/>
@@ -144,7 +144,7 @@
                     <constraint firstItem="ET0-IL-GuK" firstAttribute="top" secondItem="yr9-D9-SIG" secondAttribute="bottom" constant="1" id="J42-Ju-CvE"/>
                     <constraint firstItem="a4y-AB-TfT" firstAttribute="top" secondItem="Fnd-vV-vjI" secondAttribute="top" constant="39.5" id="LCp-qm-ve2"/>
                     <constraint firstItem="LFZ-fJ-OQE" firstAttribute="trailing" secondItem="yr9-D9-SIG" secondAttribute="trailing" id="LXD-L3-wqq"/>
-                    <constraint firstItem="2Ig-0Z-GkG" firstAttribute="top" secondItem="yr9-D9-SIG" secondAttribute="bottom" constant="1" id="MUf-uQ-wr7"/>
+                    <constraint firstItem="2Ig-0Z-GkG" firstAttribute="top" secondItem="yr9-D9-SIG" secondAttribute="bottom" constant="3" id="MUf-uQ-wr7"/>
                     <constraint firstItem="yr9-D9-SIG" firstAttribute="top" secondItem="LFZ-fJ-OQE" secondAttribute="bottom" id="QKB-Iw-XXZ"/>
                     <constraint firstItem="n6t-H8-6vD" firstAttribute="top" secondItem="yr9-D9-SIG" secondAttribute="bottom" constant="1" id="RTR-nK-mWo"/>
                     <constraint firstItem="udQ-tt-Ykw" firstAttribute="top" secondItem="a4y-AB-TfT" secondAttribute="bottom" constant="5" id="Sjy-q2-esk"/>
@@ -171,6 +171,7 @@
                 <outlet property="friendAvatarImageView" destination="ibP-EX-JII" id="cg3-gI-qAR"/>
                 <outlet property="friendNameLabel" destination="a4y-AB-TfT" id="k8g-Mh-jxf"/>
                 <outlet property="labelShareCount" destination="3fi-Zd-pQB" id="Lyx-wz-irb"/>
+                <outlet property="labelViewsCount" destination="ET0-IL-GuK" id="XBI-0h-Yhd"/>
                 <outlet property="likeButtonImage" destination="qRc-vk-lFq" id="nIm-GO-9cL"/>
                 <outlet property="likeCountLabel" destination="n6t-H8-6vD" id="r7c-Qf-3l5"/>
                 <outlet property="newsImageView" destination="yr9-D9-SIG" id="ElR-NV-22y"/>
