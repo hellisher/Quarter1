@@ -62,4 +62,10 @@ class NewsCell: UITableViewCell {
         self.labelViewsCount.text = news.newsViewsCount
     }
     
+    func adjustUITextViewHeight(arg: UITextView) {
+        arg.translatesAutoresizingMaskIntoConstraints = true
+        arg.sizeToFit()
+        arg.isScrollEnabled = false
+    }
+    
 }

@@ -124,11 +124,11 @@
         <scene sceneID="B9C-tf-ky8">
             <objects>
                 <tableViewController title="Your Friends" id="US9-83-iB6" customClass="FriendsController" customModule="_90803_Lesson1_Homework" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7xT-ti-jjH">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="7xT-ti-jjH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="fAS-Uw-D5c">
+                        <view key="tableHeaderView" contentMode="scaleToFill" misplaced="YES" id="fAS-Uw-D5c">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
@@ -136,64 +136,85 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOf-G4-Ho9">
-                                    <rect key="frame" x="8" y="66" width="367" height="21"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="bOf-G4-Ho9" firstAttribute="leading" secondItem="fAS-Uw-D5c" secondAttribute="leading" constant="8" id="3tw-2a-aOn"/>
                                 <constraint firstAttribute="trailing" secondItem="UrJ-Iu-aJO" secondAttribute="trailing" id="EY4-OA-ccO"/>
-                                <constraint firstItem="bOf-G4-Ho9" firstAttribute="top" secondItem="UrJ-Iu-aJO" secondAttribute="bottom" constant="10" id="IGe-Ea-a4I"/>
-                                <constraint firstItem="bOf-G4-Ho9" firstAttribute="trailing" secondItem="UrJ-Iu-aJO" secondAttribute="trailing" id="KMk-71-tQr"/>
                                 <constraint firstItem="UrJ-Iu-aJO" firstAttribute="top" secondItem="fAS-Uw-D5c" secondAttribute="top" id="TjX-fa-Tlh"/>
                                 <constraint firstItem="UrJ-Iu-aJO" firstAttribute="leading" secondItem="fAS-Uw-D5c" secondAttribute="leading" id="x0r-jE-plK"/>
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendsCell" id="h6K-JT-ztE" customClass="FriendsCell" customModule="_90803_Lesson1_Homework" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AlphabetOrderCell" id="h6K-JT-ztE" customClass="AlphabetOrderCell" customModule="_90803_Lesson1_Homework" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="128" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h6K-JT-ztE" id="4nb-lW-gyy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f3Z-Ie-BRf">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyD-13-Dt2">
-                                            <rect key="frame" x="104.5" y="5" width="265.5" height="89.5"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AlphabetLetter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pgZ-6g-zdS">
+                                            <rect key="frame" x="15" y="39" width="114" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="3Rc-8R-FO0">
-                                            <rect key="frame" x="5" y="5" width="89.5" height="89.5"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="3Rc-8R-FO0" secondAttribute="height" multiplier="1:1" id="xal-ch-YFi"/>
-                                            </constraints>
-                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="qyD-13-Dt2" secondAttribute="bottom" constant="5" id="2m5-aS-g1g"/>
-                                        <constraint firstItem="qyD-13-Dt2" firstAttribute="leading" secondItem="3Rc-8R-FO0" secondAttribute="trailing" constant="10" id="EZK-3M-fJW"/>
-                                        <constraint firstAttribute="bottom" secondItem="3Rc-8R-FO0" secondAttribute="bottom" constant="5" id="F0g-8t-wCA"/>
-                                        <constraint firstItem="3Rc-8R-FO0" firstAttribute="leading" secondItem="4nb-lW-gyy" secondAttribute="leading" constant="5" id="PU3-ru-fhz"/>
-                                        <constraint firstAttribute="trailing" secondItem="qyD-13-Dt2" secondAttribute="trailing" constant="5" id="Pe4-A3-Pro"/>
-                                        <constraint firstItem="3Rc-8R-FO0" firstAttribute="top" secondItem="4nb-lW-gyy" secondAttribute="top" constant="5" id="ZFJ-gz-Uup"/>
-                                        <constraint firstItem="qyD-13-Dt2" firstAttribute="leading" secondItem="3Rc-8R-FO0" secondAttribute="trailing" constant="10" id="exu-1I-xAH"/>
-                                        <constraint firstItem="qyD-13-Dt2" firstAttribute="top" secondItem="4nb-lW-gyy" secondAttribute="top" constant="5" id="gSr-Iv-Mzj"/>
+                                        <constraint firstItem="pgZ-6g-zdS" firstAttribute="leading" secondItem="4nb-lW-gyy" secondAttribute="leading" constant="15" id="QBF-9H-YP3"/>
+                                        <constraint firstItem="pgZ-6g-zdS" firstAttribute="top" secondItem="4nb-lW-gyy" secondAttribute="top" constant="39" id="XBL-cL-Dat"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="friendName" destination="qyD-13-Dt2" id="kZe-kd-6eJ"/>
-                                    <outlet property="friendPhoto" destination="3Rc-8R-FO0" id="8VN-ft-szu"/>
-                                    <outlet property="friendShadow" destination="f3Z-Ie-BRf" id="lFK-N1-yfm"/>
+                                    <outlet property="labelAlphabetLetter" destination="pgZ-6g-zdS" id="YQ1-yw-NKo"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FriendsCell" id="CAM-Oe-fd3" customClass="FriendsCell" customModule="_90803_Lesson1_Homework" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="228" width="375" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CAM-Oe-fd3" id="WXw-K6-9ha">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f91-uZ-g17">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLW-wX-BWi">
+                                            <rect key="frame" x="105" y="5" width="265" height="90"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalCompressionResistancePriority="250" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="gsx-31-fcD">
+                                            <rect key="frame" x="5" y="5" width="90" height="90"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="gsx-31-fcD" secondAttribute="height" multiplier="1:1" id="BaJ-Bh-UgC"/>
+                                            </constraints>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDy-mI-aYi">
+                                            <rect key="frame" x="5" y="5" width="90" height="90"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <action selector="friendPhotoButtonPressed:" destination="CAM-Oe-fd3" eventType="touchUpInside" id="2Kg-9O-zct"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="gsx-31-fcD" firstAttribute="leading" secondItem="WXw-K6-9ha" secondAttribute="leading" constant="5" id="Cad-ty-bT4"/>
+                                        <constraint firstItem="TLW-wX-BWi" firstAttribute="top" secondItem="WXw-K6-9ha" secondAttribute="top" constant="5" id="Gom-cH-1mJ"/>
+                                        <constraint firstAttribute="trailing" secondItem="TLW-wX-BWi" secondAttribute="trailing" constant="5" id="ZDx-Ll-KIZ"/>
+                                        <constraint firstItem="gsx-31-fcD" firstAttribute="top" secondItem="WXw-K6-9ha" secondAttribute="top" constant="5" id="hIT-Ga-Ise"/>
+                                        <constraint firstAttribute="bottom" secondItem="TLW-wX-BWi" secondAttribute="bottom" constant="5" id="i0N-O1-h5d"/>
+                                        <constraint firstItem="TLW-wX-BWi" firstAttribute="leading" secondItem="gsx-31-fcD" secondAttribute="trailing" constant="10" id="keI-Pg-1d2"/>
+                                        <constraint firstItem="TLW-wX-BWi" firstAttribute="leading" secondItem="gsx-31-fcD" secondAttribute="trailing" constant="10" id="ljx-KK-yyA"/>
+                                        <constraint firstAttribute="bottom" secondItem="gsx-31-fcD" secondAttribute="bottom" constant="5" id="tm8-26-7bf"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="friendName" destination="TLW-wX-BWi" id="ZO9-KN-68A"/>
+                                    <outlet property="friendPhoto" destination="gsx-31-fcD" id="we2-pE-BVE"/>
+                                    <outlet property="friendShadow" destination="f91-uZ-g17" id="6Vw-mE-5cI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -206,7 +227,6 @@
                         <barButtonItem key="backBarButtonItem" title="Friends" id="SAz-0g-qMf"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="friendFirstNameLetter" destination="bOf-G4-Ho9" id="ZM7-8G-GNb"/>
                         <outlet property="searchBar" destination="UrJ-Iu-aJO" id="U2V-dk-h6q"/>
                     </connections>
                 </tableViewController>
@@ -389,6 +409,7 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="fmy-qx-ioA" id="vNJ-Sw-B7n"/>
                             <outlet property="delegate" destination="fmy-qx-ioA" id="fZa-lo-0Tz"/>

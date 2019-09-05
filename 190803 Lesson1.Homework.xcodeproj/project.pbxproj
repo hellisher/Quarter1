@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		961898FD231D7B8D00469920 /* AlphabetOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961898FC231D7B8D00469920 /* AlphabetOrderCell.swift */; };
 		962AA1BF230545610023E4FC /* AllGroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962AA1BE230545610023E4FC /* AllGroupsController.swift */; };
 		962AA1C1230545720023E4FC /* AllGroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962AA1C0230545720023E4FC /* AllGroupsCell.swift */; };
 		963BEF78230496BF00A5F366 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 963BEF77230496BF00A5F366 /* FriendsController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		961898FC231D7B8D00469920 /* AlphabetOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabetOrderCell.swift; sourceTree = "<group>"; };
 		962AA1BE230545610023E4FC /* AllGroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsController.swift; sourceTree = "<group>"; };
 		962AA1C0230545720023E4FC /* AllGroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsCell.swift; sourceTree = "<group>"; };
 		963BEF77230496BF00A5F366 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 			children = (
 				963BEF77230496BF00A5F366 /* FriendsController.swift */,
 				963BEF79230496DF00A5F366 /* FriendsCell.swift */,
+				961898FC231D7B8D00469920 /* AlphabetOrderCell.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96AF7E7E230553EE0017863D /* Group.swift in Sources */,
+				961898FD231D7B8D00469920 /* AlphabetOrderCell.swift in Sources */,
 				962AA1BF230545610023E4FC /* AllGroupsController.swift in Sources */,
 				96AF7E85230557270017863D /* FriendsPhotoCell.swift in Sources */,
 				96636E512313EE12008E776E /* News.swift in Sources */,
