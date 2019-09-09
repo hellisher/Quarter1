@@ -468,7 +468,7 @@
         <!--News-->
         <scene sceneID="GEJ-LN-YH4">
             <objects>
-                <navigationController title="News" id="uAB-OE-FWq" sceneMemberID="viewController">
+                <navigationController title="News" id="uAB-OE-FWq" customClass="CustomNavigationController" customModule="_90803_Lesson1_Homework" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="News" image="newsIcon" id="Msk-pr-1qn"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kot-Ii-Doz">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -505,7 +505,7 @@
         <!--Friends-->
         <scene sceneID="Et6-Mv-9Ur">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ddK-n5-Gnw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ddK-n5-Gnw" customClass="CustomNavigationController" customModule="_90803_Lesson1_Homework" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Friends" image="FriendsIcon.png" springLoaded="YES" id="mSz-9E-JWm"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0pX-3Z-qXe">
@@ -524,7 +524,7 @@
         <!--Groups-->
         <scene sceneID="VfE-zL-4c4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hTE-TQ-6wK" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hTE-TQ-6wK" customClass="CustomNavigationController" customModule="_90803_Lesson1_Homework" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Groups" image="Groups.png" id="soR-BZ-bMb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sk7-qc-4yU">
