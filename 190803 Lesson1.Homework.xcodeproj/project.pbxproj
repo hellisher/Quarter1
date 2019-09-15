@@ -20,6 +20,8 @@
 		96636E512313EE12008E776E /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96636E502313EE12008E776E /* News.swift */; };
 		96636E552313F97A008E776E /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96636E542313F97A008E776E /* NewsViewController.swift */; };
 		96636E5723140005008E776E /* NewsViewController + UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96636E5623140005008E776E /* NewsViewController + UITableViewDataSource.swift */; };
+		969F8DD9232E1BE30015A794 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F8DD8232E1BE30015A794 /* Session.swift */; };
+		969F8DDC232E25410015A794 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 969F8DDB232E25410015A794 /* SettingsViewController.swift */; };
 		96AF7E7E230553EE0017863D /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AF7E7D230553EE0017863D /* Group.swift */; };
 		96AF7E80230554110017863D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AF7E7F230554110017863D /* User.swift */; };
 		96AF7E832305565A0017863D /* FriendsPhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96AF7E822305565A0017863D /* FriendsPhotoController.swift */; };
@@ -47,6 +49,8 @@
 		96636E502313EE12008E776E /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		96636E542313F97A008E776E /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
 		96636E5623140005008E776E /* NewsViewController + UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewsViewController + UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		969F8DD8232E1BE30015A794 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		969F8DDB232E25410015A794 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		96AF7E7D230553EE0017863D /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		96AF7E7F230554110017863D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		96AF7E822305565A0017863D /* FriendsPhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsPhotoController.swift; sourceTree = "<group>"; };
@@ -112,7 +116,15 @@
 			path = News;
 			sourceTree = "<group>";
 		};
-		96AF7E7A230552DF0017863D /* Model */ = {
+		969F8DDA232E252B0015A794 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				969F8DDB232E25410015A794 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		96AF7E7A230552DF0017863D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				96AF7E7D230553EE0017863D /* Group.swift */,
@@ -121,8 +133,9 @@
 				96B358E923267F97002CCB89 /* CustomPushAnimator.swift */,
 				96B358EB232683DB002CCB89 /* CustomPopAnimator.swift */,
 				96B358ED232685C3002CCB89 /* CustomNavigationController.swift */,
+				969F8DD8232E1BE30015A794 /* Session.swift */,
 			);
-			path = Model;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		96AF7E81230555B80017863D /* Friend's Photo */ = {
@@ -153,8 +166,9 @@
 		96E022C122F5ED3B0094AA80 /* 190803 Lesson1.Homework */ = {
 			isa = PBXGroup;
 			children = (
+				969F8DDA232E252B0015A794 /* Settings */,
 				96636E492312F30E008E776E /* News */,
-				96AF7E7A230552DF0017863D /* Model */,
+				96AF7E7A230552DF0017863D /* Classes */,
 				962AA1BD230543EF0023E4FC /* AllGroups */,
 				963BEF7B23049B4B00A5F366 /* Groups */,
 				96AF7E81230555B80017863D /* Friend's Photo */,
@@ -254,7 +268,9 @@
 				96B358EA23267F97002CCB89 /* CustomPushAnimator.swift in Sources */,
 				963BEF7F23049B9800A5F366 /* GroupsCell.swift in Sources */,
 				965F3AE922F60626009A6ED4 /* LoginFormController.swift in Sources */,
+				969F8DDC232E25410015A794 /* SettingsViewController.swift in Sources */,
 				96636E5723140005008E776E /* NewsViewController + UITableViewDataSource.swift in Sources */,
+				969F8DD9232E1BE30015A794 /* Session.swift in Sources */,
 				96636E4E2312F3BC008E776E /* NewsCell.swift in Sources */,
 				96636E552313F97A008E776E /* NewsViewController.swift in Sources */,
 				96B358EE232685C3002CCB89 /* CustomNavigationController.swift in Sources */,
