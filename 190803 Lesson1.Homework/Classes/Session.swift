@@ -19,5 +19,6 @@ class Session {
     var token: String = ""
     var userId: Int = 0
     var myImage: UIImage = UIImage(named: "Valerii El-Khatib")!
+    //Как транслировать фотографию?
 
 }
