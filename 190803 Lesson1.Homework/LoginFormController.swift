@@ -21,6 +21,12 @@ class LoginFormController: UIViewController {
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
         activityIndicator.startAnimating()
+        
+        let session = Session.instance
+        session.myName = "Valerii El-Khatib"
+        session.token = "I'm loving cheesecakes!"
+        session.userId = 13776677
+        session.myImage = UIImage(named: "Valerii El-Khatib")!
     }
 
     @objc func keyboardWasShown(notification: Notification) {

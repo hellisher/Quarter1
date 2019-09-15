@@ -11,17 +11,12 @@ import UIKit
 class FriendsController: UITableViewController, UISearchBarDelegate {
 
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var friendFirstNameLetter: UILabel!
     
     var friends = myFriends
-    var filteredFriends = myFriends
-    var isSearching = false
+    var letters: [String] = ["A", "B", "C", "D", "E"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchBar.delegate = self
-        searchBar.returnKeyType = UIReturnKeyType.done
-        friendFirstNameLetter.text = "Jopa"
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -29,33 +24,19 @@ class FriendsController: UITableViewController, UISearchBarDelegate {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        if isSearching {
-            return filteredFriends.count
-        }
-        
         return friends.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath) as! FriendsCell
+        let alphabetCell = tableView.dequeueReusableCell(withIdentifier: "AlphabetOrderCell", for: indexPath) as! AlphabetOrderCell
         let friend = friends[indexPath.row]
-        
-        if isSearching {
-            cell.friendName.text = friend.friendName
-        }
-        
+        let letter = letters[indexPath.row]
         cell.friendName.text = friend.friendName
         cell.friendPhoto.image = friend.friendAvatar
+        alphabetCell.labelAlphabetLetter.text = letter
         return cell
     }
-    
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        if searchBar.texrt == nil || searchBar.text == "" {
-//            isSearching = false
-//            view.endEditing(true)
-//        }
-//    }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let friend = friends[indexPath.row]
@@ -63,6 +44,8 @@ class FriendsController: UITableViewController, UISearchBarDelegate {
         vc.friendPhoto = friend.friendAvatar
         self.navigationController?.pushViewController(vc, animated: true)
     }
+    
+    
     
     /*
     // Override to support conditional editing of the table view.

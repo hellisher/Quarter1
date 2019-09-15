@@ -13,16 +13,28 @@ class FriendsCell: UITableViewCell {
     @IBOutlet weak var friendName: UILabel!
     @IBOutlet weak var friendPhoto: UIImageView!
     @IBOutlet weak var friendShadow: UIView!
+    @IBAction func friendPhotoButtonPressed(_ sender: Any) {
+        animateSelectedFriendPhoto()
+    }
     
-    func animateAuthButton() {
+    func animateSelectedFriendPhotoAlt() {
+        UIView.animate(withDuration: 0.5,
+                       delay: 0,
+                       usingSpringWithDamping: 0.5,
+                       initialSpringVelocity: 0,
+                       options: [],
+                       animations: {
+            self.friendPhoto.frame.origin.x -= 100
+        })
+    }
+    
+    func animateSelectedFriendPhoto() {
         let animation = CASpringAnimation(keyPath: "transform.scale")
-        animation.fromValue = 0
-        animation.toValue = 1
-        animation.stiffness = 200
-        animation.mass = 2
-        animation.duration = 2
-        animation.beginTime = CACurrentMediaTime() + 1
-        animation.fillMode = CAMediaTimingFillMode.backwards
+        animation.fromValue = 1
+        animation.toValue = 0.85
+//        animation.duration = 1
+        animation.beginTime = CACurrentMediaTime()
+        self.friendPhoto.layer.add(animation, forKey: nil)
     }
     
     override func awakeFromNib() {

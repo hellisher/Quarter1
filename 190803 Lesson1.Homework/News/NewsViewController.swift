@@ -22,4 +22,10 @@ class NewsViewController: UIViewController {
         news.append(News(friendName: "Margot Robbie", date: "25.08.2019", friendAvatar: UIImage(named: "Robbie"), newsText: "I agree!", newsImage: UIImage(named: "Trump3"), newsLikesCount: "192", newSharesCount: "981", newsCommentsCount: "645", newsViewsCount: "213"))
         self.tableView.dataSource = self
     }
+    
+    func adjustUITextViewHeight(arg: UITextView) {
+        arg.translatesAutoresizingMaskIntoConstraints = true
+        arg.sizeToFit()
+        arg.isScrollEnabled = false
+    }
 }

@@ -20,11 +20,21 @@ class FriendsPhotoCell: UICollectionViewCell {
             likeCountLabel.text = String(likeCount)
             likeCountLabel.textColor = UIColor.red
             likeButton.setImage(UIImage(named: "ActiveLike"), for: .normal)
+            animateLikeCountLabel()
         } else {
             likeCount -= 1
             likeCountLabel.text = String(likeCount)
             likeCountLabel.textColor = UIColor.black
             likeButton.setImage(UIImage(named: "NoActiveLike"), for: .normal)
+            animateLikeCountLabel()
         }
+    }
+    
+    func animateLikeCountLabel() {
+        UIView.transition(with: likeCountLabel,
+                          duration: 1,
+                          options: .transitionFlipFromTop,
+                          animations: {},
+                          completion: nil)
     }
 }
